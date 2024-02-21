@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --ff-montserrat: "Montserrat";
+    --ff-fraunces: "Fraunces";
+    --fw-montserrat-normal: 500;
+    --fw-montserrat-bold: 700;
+    --fw-fraunces: 700;
+    --clr-dark-cyan: hsl(158, 36%, 37%);
+    --clr-cream: hsl(30, 38%, 92%);
+    --clr-very-dark-blue: hsl(212, 21%, 14%);
+    --clr-dark-grayish-blue: hsl(228, 12%, 48%);
+    --clr-very-dark-cyan: hsl(156, 42%, 18%);
+    --clr-white: hsl(0, 0%, 100%);
+    --bd-radius: 10px;
+}
+
+body {
+    background-color: var(--clr-cream);
+    display: flex;
+    margin: auto;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: var(--clr-white);
+    border: none;
+    display: grid;
+    grid-auto-flow: column;
+    border-radius: var(--bd-radius);
+    min-height: 450px;
+    max-width: 600px;
+}
+
+.product-image {
+    background-image: url(https://github.com/ArnoldMajor/product-preview-card-component/blob/6a45d44f909a0dbda59be554c8f91ce078d0c360/image-product-desktop.jpg?raw=true);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: var(--bd-radius) 0px 0px var(--bd-radius);
+    min-width: 300px;
+}
+
+.product-info {
+    width: fit-content;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-category {
+    font-family: var(--ff-montserrat);
+    font-weight: var(--fw-montserrat-normal);
+    color: var(--clr-dark-grayish-blue);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    padding-bottom: 20px;
+}
+
+.product-name {
+    font-family: var(--ff-fraunces);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2rem;
+    padding-bottom: 30px;
+}
+
+.product-description {
+    font-family: var(--ff-montserrat);
+    font-weight: var(--fw-montserrat-normal);
+    color: var(--clr-dark-grayish-blue);
+    font-size: 0.9rem;
+    line-height: 1.25rem;
+    padding-bottom: 30px;
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 30px;
+}
+.price h1 {
+    font-family: var(--ff-fraunces);
+    color: var(--clr-dark-cyan);
+    font-size: 2rem;
+    padding-right: 15px;
+}
+
+.price p {
+    font-family: var(--ff-montserrat);
+    font-weight: var(--fw-montserrat-normal);
+    font-size: 0.8rem;
+    color: var(--clr-dark-grayish-blue);
+    text-decoration-line: line-through;
+}
+
+.button button {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-dark-cyan);
+    color: var(--clr-white);
+    border: none;
+    border-radius: 5px;
+    width: 250px;
+    height: 45px;
+}
+
+.button a {
+    text-decoration: none;
+    color: var(--clr-white);
+}
+
+.button button:hover {
+    cursor: pointer;
+    background-color: var(--clr-very-dark-cyan);
+}
+
+.button img {
+    padding-right: 10px;
+}
+
+@media (max-width: 550px) {
+    .container {
+        display: grid;
+        grid-auto-flow: row;
+        min-height: 600px;
+        max-width: 400px;
+        margin: 10px;
+    }
+
+    .product-image {
+        border-radius: var(--bd-radius);
+        background-image: url(https://github.com/ArnoldMajor/product-preview-card-component/blob/6a45d44f909a0dbda59be554c8f91ce078d0c360/image-product-mobile.jpg?raw=true);
+        background-size: cover;
+        min-height: 250px
+    }
+
+    .button button {
+        min-width: 330px;
+    }
+}
